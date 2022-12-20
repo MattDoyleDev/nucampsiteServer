@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var app = express();
 
 function auth(req, res, next) {
     console.log(req.headers);
@@ -62,7 +63,7 @@ connect.then(() => console.log('Connected correctly to server'),
     err => console.log(err)
 );
 
-var app = express();
+// var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
